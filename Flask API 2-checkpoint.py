@@ -23,7 +23,7 @@ import sys
 
 ################################################################################################################################
 # Load the pre-trained model
-model = keras.models.load_model(r'C:\final_models\model1\EfficientNetB0-skin disease-92.10.h5')
+model = keras.models.load_model(r'./model1/EfficientNetB0-skin disease-92.10.h5')
 
 # Define the target image size for the model
 img_size = (300, 300)
