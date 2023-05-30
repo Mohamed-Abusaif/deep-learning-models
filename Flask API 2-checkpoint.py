@@ -61,6 +61,7 @@ def validate_image():
             return m2
     except:
         # Handle any errors that occur during image validation
+        print(image_path)
         return 'Invalid image .'
 def predictor(sdir, csv_path,  model_path, crop_image = False):    
     # read in the csv file
