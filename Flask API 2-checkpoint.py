@@ -15,6 +15,8 @@ from tensorflow.keras.models import load_model
 import matplotlib.pyplot as plt
 from flask import Flask
 from flask import request
+from flask import jsonify
+
 import sys
 
 
@@ -61,8 +63,7 @@ def validate_image():
             return m2
     except:
         # Handle any errors that occur during image validation
-        print(image_path)
-        return 'Invalid image .'
+        return jsonify({'message': 'Invalid image.', 'image_path': image_path})
 def predictor(sdir, csv_path,  model_path, crop_image = False):    
     # read in the csv file
     class_df=pd.read_csv(csv_path)    
