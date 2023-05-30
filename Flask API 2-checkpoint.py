@@ -48,7 +48,7 @@ app = Flask(__name__)
 @app.route('/check',methods = ['post'])
 
 def validate_image():
-    image_path = request.form['path']
+    image_path = "D:\3.CyberSecurity\Random\Screenshot (611).png"
     print(image_path)
     try:
         img = preprocess_image(image_path)
