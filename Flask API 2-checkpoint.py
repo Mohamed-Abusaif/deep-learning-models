@@ -49,6 +49,7 @@ app = Flask(__name__)
 
 def validate_image():
     image_path = request.form['path']
+    print(image_path)
     try:
         img = preprocess_image(image_path)
         preds = model.predict(img)
